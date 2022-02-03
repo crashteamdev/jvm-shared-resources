@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_APPENDERS" value="${logbackAppenders:-CONSOLE}"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="dev/crashteam/sharedresources/logback/console-appender.xml"/>
+    <include resource="dev/crashteam/sharedresources/logback/properties-appender.xml"/>
+
+    <root level="${loggingLevelRoot}">
+        <if condition='property("LOG_APPENDERS").contains("CONSOLE")'>
+            <then>
+                <appender-ref ref="CONSOLE"/>
+            </then>
+        </if>
+        <if condition='property("LOG_APPENDERS").contains("FILE")'>
+            <then>
+                <appender-ref ref="FILE"/>
+            </then>
+        </if>
+    </root>
+
+    <logger name="dev.crashteam" level="ALL"/>
+
+    <jmxConfigurator/>
+</configuration>

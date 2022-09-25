@@ -1,5 +1,5 @@
 # @dockerfile.Template@
-FROM openjdk:17.0.2-slim
+FROM openjdk:18.0.2-slim
 
 RUN useradd -s /bin/false -U -u 20000 crashteam
 

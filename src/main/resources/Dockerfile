@@ -3,7 +3,7 @@ FROM eclipse-temurin:17-jre-jammy
 RUN apt update && \
     apt -y --no-install-recommends --no-install-suggests install libjemalloc2 curl && \
     apt clean && rm -rf /var/lib/apt/lists/*
-ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
+ENV LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libjemalloc.so.2
 
 RUN useradd -s /bin/false -U -u 20000 crashteam
 

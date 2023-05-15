@@ -26,10 +26,10 @@
                 <pattern>
                     <pattern>
                         {
-                        "@timestamp": "%date{yyy-MM-dd'T'HH:mm:ss.SSSXXX, UTC}",
-                        "@severity": "%level",
-                        "thread_name": "%thread",
-                        "logger_name": "%logger",
+                        "timestamp": "%date{yyy-MM-dd'T'HH:mm:ss.SSSXXX, UTC}",
+                        "level": "%level",
+                        "thread": "%thread",
+                        "logger": "%logger",
                         "message": "%message"
                         }
                     </pattern>

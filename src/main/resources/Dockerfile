@@ -7,12 +7,12 @@ ENV LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libjemalloc.so.2
 
 RUN useradd -s /bin/false -U -u 20000 crashteam
 
-COPY --chown=crashteam:crashteam @artifactId@-@version@.jar /opt/@artifactId@/@artifactId@.jar
+COPY --chown=crashteam:crashteam ${artifactId}-${version}.jar /opt/${artifactId}/${artifactId}.jar
 
 USER crashteam:crashteam
 
-CMD ["java", "-Xmx256m", "-Xss256k", "-jar","/opt/@artifactId@/@artifactId@.jar"]
+CMD ["java", "-Xmx256m", "-Xss256k", "-jar","/opt/${artifactId}/${artifactId}.jar"]
 
-EXPOSE @exposed.ports@
+EXPOSE ${exposed.ports}
 
-WORKDIR /opt/@artifactId@
+WORKDIR /opt/${artifactId}

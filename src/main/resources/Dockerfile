@@ -11,7 +11,7 @@ COPY --chown=crashteam:crashteam ${artifactId}-${version}.jar /opt/${artifactId}
 
 USER crashteam:crashteam
 
-CMD ["java", "-Xmx256m", "-Xss256k", "-jar","/opt/${artifactId}/${artifactId}.jar"]
+CMD ["java", "-jar", "/opt/${artifactId}/${artifactId}.jar"]
 
 EXPOSE ${exposed.ports}
 

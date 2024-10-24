@@ -1,5 +1,5 @@
 # @dockerfile.Template@
-FROM eclipse-temurin:21-jre-jammy
+FROM eclipse-temurin:21.0.5_11-jre-jammy
 RUN apt update && \
     apt -y --no-install-recommends --no-install-suggests install libjemalloc2 curl && \
     apt clean && rm -rf /var/lib/apt/lists/*

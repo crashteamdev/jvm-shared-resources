@@ -7,7 +7,7 @@
     <parent>
         <groupId>dev.crashteam</groupId>
         <artifactId>library-parent-pom</artifactId>
-        <version>2.0.0</version>
+        <version>2.1.1</version>
     </parent>
 
     <artifactId>shared-resources</artifactId>
@@ -42,7 +42,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot</artifactId>
-            <version>3.2.5</version>
+            <version>3.5.16</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
